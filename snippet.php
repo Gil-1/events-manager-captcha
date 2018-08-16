@@ -19,7 +19,7 @@ function my_em_event_form_captcha_check() {
     if(!$captcha){
       $EM_Booking->errors[]=__('Veuillez valider le captcha');
     }
-    $secretKey = "6LdAxRYTAAAAAHrY3V-Y-p0O5TIYdlhTGfhw8V-8";
+    $secretKey = "please_put_your_secretkey_here";
     $ip = $_SERVER['REMOTE_ADDR'];
     $response=file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=".$secretKey."&response=".$captcha."&remoteip=".$ip);
     $responseKeys = json_decode($response,true);
